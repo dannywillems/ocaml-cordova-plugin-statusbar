@@ -6,7 +6,7 @@ Binding to
 **Not tested. [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-statusbar-example) in development**
 
-## What does cordova-plugin-vibration do ?
+## What does cordova-plugin-statusbar do ?
 
 Create a statusbar object.
 ```
