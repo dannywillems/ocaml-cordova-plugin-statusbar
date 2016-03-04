@@ -1,4 +1,4 @@
-# ocaml-cordova-plugin-vibration
+# ocaml-cordova-plugin-statusbar
 
 Binding to
 [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
