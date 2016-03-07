@@ -3,7 +3,7 @@
 Binding to
 [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
 
-**Not tested. [Example
+**Not tested, but should work. [Example
 application](https://github.com/dannywillems/ocaml-cordova-plugin-statusbar-example) in development**
 
 ## What does cordova-plugin-statusbar do ?
@@ -12,7 +12,9 @@ Create a statusbar object.
 ```
 The StatusBar object provides some functions to customize the iOS and Android StatusBar.
 ```
-Source: [cordova-plugin-vibration](https://github.com/apache/cordova-plugin-statusbar)
+Source: [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
 
 ## How to use ?
 
+See the official documentation
+[cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
