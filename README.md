@@ -3,8 +3,8 @@
 Binding to
 [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
 
-**Not tested, but should work. [Example
-application](https://github.com/dannywillems/ocaml-cordova-plugin-statusbar-example) in development**
+[Example
+application](https://github.com/dannywillems/ocaml-cordova-plugin-statusbar-example)
 
 ## What does cordova-plugin-statusbar do ?
 
