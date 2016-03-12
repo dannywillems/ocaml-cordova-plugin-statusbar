@@ -12,4 +12,4 @@ class type statusbar =
     method show : unit Js.meth
   end
 
-val statusbar : statusbar Js.t
+val statusbar : unit -> statusbar Js.t

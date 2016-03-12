@@ -12,4 +12,4 @@ class type statusbar =
     method show : unit Js.meth
   end
 
-let statusbar : statusbar Js.t = Js.Unsafe.js_expr ("StatusBar")
+let statusbar () = Js.Unsafe.js_expr ("StatusBar")
