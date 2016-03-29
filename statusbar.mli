@@ -1,15 +1,21 @@
-class type statusbar =
+(* -------------------------------------------------------------------------- *)
+class statusbar : Ojs.t ->
   object
-    method isVisible : bool Js.t Js.readonly_prop
-    method overlaysWebView : bool Js.t -> unit Js.meth
-    method styleDefault : unit Js.meth
-    method styleLightContent : unit Js.meth
-    method styleBlackTranslucent : unit Js.meth
-    method styleBlackOpaque : unit Js.meth
-    method backgroundColorByName : Js.js_string Js.t -> unit Js.meth
-    method backgroundColorByHexString: Js.js_string Js.t -> unit Js.meth
-    method hide : unit Js.meth
-    method show : unit Js.meth
+    inherit Ojs.obj
+    method is_visible                     : bool
+    method overlays_web_view              : bool -> unit
+    method style_default                  : unit
+    method style_light_content            : unit
+    method style_black_translucent        : unit
+    method style_black_opaque             : unit
+    method background_color_by_name       : string -> unit
+    method background_color_by_hex_string : string -> unit
+    method hide                           : unit
+    method show                           : unit
   end
+(* -------------------------------------------------------------------------- *)
 
-val statusbar : unit -> statusbar Js.t
+(* -------------------------------------------------------------------------- *)
+val t : unit -> statusbar
+[@@js.get "StatusBar"]
+(* -------------------------------------------------------------------------- *)
