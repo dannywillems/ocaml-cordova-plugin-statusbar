@@ -37,16 +37,12 @@ See the official documentation
 The statusbar plugin creates a new object called *StatusBar*, but the object is
 available when the *deviceready* event is handled.
 
-We don't provide a *statusbar* variable in this plugin (as said in the official
-documentation on js_of_ocaml). If we did, *statusbar* will be set to **undefined**
-because the *statusbar* object doesn't exist when we create the variable.
-
-We provide a function Statusbar.t of type unit -> Statusbar.statusbar which does
-returns the *statusbar* object. You need to call it when the deviceready event
-is handled, eg
+We provide a function Statusbar.t of type unit -> Statusbar.statusbar which
+returns the binding to the *statusbar* object. You need to call it when the
+deviceready event is handled, eg (with js_of_ocaml)
 
 ```OCaml
-let on_device_ready =
+let on_device_ready _ =
   let s = Statusbar.t () in
   (* Some code *)
 
