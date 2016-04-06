@@ -1,5 +1,7 @@
 # ocaml-cordova-plugin-statusbar
 
+* gen_js_api (master branch): [![Build Status](https://travis-ci.org/dannywillems/ocaml-cordova-plugin-statusbar.svg?branch=master)](https://travis-ci.org/dannywillems/ocaml-cordova-plugin-statusbar)
+
 Binding to
 [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
 
