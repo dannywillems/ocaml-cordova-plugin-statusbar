@@ -29,6 +29,28 @@ The js_of_ocaml version is available in the branch
 [*js_of_ocaml*](https://github.com/dannywillems/ocaml-cordova-plugin-statusbar/tree/js_of_ocaml)
 but we **recommend** to use the gen_js_api version which is the master branch.
 
+## How to install and compile your project by using this plugin ?
+
+Don't forget to switch to a compiler **>= 4.03.0**.
+```Shell
+opam switch 4.03.0+beta1
+```
+
+You can use opam by pinning the repository with
+```Shell
+opam pin add cordova-plugin-statusbar https://github.com/dannywillems/ocaml-cordova-plugin-statusbar.git
+```
+
+and to compile your project, use
+```Shell
+ocamlfind ocamlc -c -o [output_file] -package gen_js_api -package cordova-plugin-statusbar [...] -linkpkg [other arguments]
+```
+
+Don't forget to install the cordova plugin statusbar with
+```Shell
+cordova plugin add cordova-plugin-statusbar
+```
+
 ## How to use ?
 
 See the official documentation
@@ -39,13 +61,13 @@ See the official documentation
 The statusbar plugin creates a new object called *StatusBar*, but the object is
 available when the *deviceready* event is handled.
 
-We provide a function Statusbar.t of type unit -> Statusbar.statusbar which
-returns the binding to the *statusbar* object. You need to call it when the
+We provide a function Cordova_statusbar.t of type unit -> Cordova_statusbar.statusbar which
+returns the binding to the *StatusBar* object. You need to call it when the
 deviceready event is handled, eg (with js_of_ocaml)
 
 ```OCaml
 let on_device_ready _ =
-  let s = Statusbar.t () in
+  let s = Cordova_statusbar.t () in
   (* Some code *)
 
 let _ =
