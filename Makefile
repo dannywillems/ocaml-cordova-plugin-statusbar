@@ -1,8 +1,4 @@
-################################################################################
-MLI_FILE		= cordova_statusbar.mli
-## Name which will be used in -package with ocamlfind
-LIB_NAME		= cordova-plugin-statusbar
-################################################################################
+include Makefile.conf
 
 ################################################################################
 CC				= ocamlc
