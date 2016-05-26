@@ -56,23 +56,3 @@ cordova plugin add cordova-plugin-statusbar
 
 See the official documentation
 [cordova-plugin-statusbar](https://github.com/apache/cordova-plugin-statusbar)
-
-## ! BE CAREFUL !
-
-The statusbar plugin creates a new object called *StatusBar*, but the object is
-available when the *deviceready* event is handled.
-
-We provide a function Cordova_statusbar.t of type unit -> Cordova_statusbar.statusbar which
-returns the binding to the *StatusBar* object. You need to call it when the
-deviceready event is handled, eg (with js_of_ocaml)
-
-```OCaml
-let on_device_ready _ =
-  let s = Cordova_statusbar.t () in
-  (* Some code *)
-
-let _ =
-  Dom.addEventListener Dom_html.document (Dom.Event.make "deviceready")
-  (Dom_html.handler on_device_ready) Js._false
-```
-
